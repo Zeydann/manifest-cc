@@ -12,6 +12,10 @@
           fetch="https://gitea.com/ProjectCiRCLE-ROM"
           revision="16.2" />
 
+  <remote name="zeydann"
+          fetch="https://github.com/Zeydann"
+          revision="16.2" />
+
   <!-- Forked projects -->
   <remove-project name="LineageOS/android" />
   <remove-project name="LineageOS/android_bionic" />
@@ -53,16 +57,16 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project name="build_soong" path="build/soong" remote="circle" groups="pdk,tradefed,sysui-studio" />
+  <project name="build_soong-cc" path="build/soong" remote="zeydann" groups="pdk,tradefed,sysui-studio" />
   <project name="device_generic_common" path="device/generic/common" remote="circle" groups="pdk" />
-  <project name="device_lineage_sepolicy" path="device/lineage/sepolicy" remote="circle" />
+  <project name="device_lineage_sepolicy-cc" path="device/lineage/sepolicy" remote="zeydann" />
   <project name="external_bash" path="external/bash" remote="circle" />
   <project name="external_bouncycastle" path="external/bouncycastle" remote="circle" groups="pdk" />
   <project name="external_devshell" path="external/devshell" remote="circle">
     <linkfile src="toplevel.envrc" dest=".envrc" />
   </project>
   <project name="frameworks_av" path="frameworks/av" remote="circle" groups="pdk,sysui-studio" />
-  <project name="frameworks_base" path="frameworks/base" remote="circle" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
+  <project name="frameworks_base-cc" path="frameworks/base" remote="zeydann" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
   <project name="frameworks_native" path="frameworks/native" remote="circle" groups="pdk" />
   <project name="frameworks_opt_telephony" path="frameworks/opt/telephony" remote="circle" groups="pdk,sysui-studio" />
   <project name="manifest" path="android" remote="circle" />
@@ -72,7 +76,8 @@
   <project name="packages_apps_LineageParts" path="packages/apps/LineageParts" remote="circle" />
   <project name="packages_apps_ParanoidSense" path="packages/apps/ParanoidSense" remote="circle" />
   <project name="packages_apps_PrivateSpace" path="packages/apps/PrivateSpace" remote="circle" groups="pdk-fs" />
-  <project name="packages_apps_Settings" path="packages/apps/Settings" remote="circle" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+  <project name="packages_apps_Settings-cc" path="packages/apps/Settings" remote="zeydann" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
+  <project name="packages_apps_LMOFreeform-cc" path="packages/apps/LMOFreeform" remote="zeydann" />
   <project name="packages_apps_SetupWizard" path="packages/apps/SetupWizard" remote="circle" />
   <project name="packages_apps_Twelve" path="packages/apps/Twelve" remote="circle" />
   <project name="packages_apps_Updater" path="packages/apps/Updater" remote="circle" />
@@ -80,6 +85,6 @@
   <project name="packages_services_Car" path="packages/services/Car" remote="circle" groups="pdk-cw-fs,pdk-fs" />
   <project name="system_core" path="system/core" remote="circle" groups="pdk" />
   <project name="system_sepolicy" path="system/sepolicy" remote="circle" groups="pdk" />
-  <project name="vendor_circle" path="vendor/circle" remote="circle" />
+  <project name="vendor_circle" path="vendor/circle" remote="zeydann" />
   <project name="vendor_gms" path="vendor/gms" remote="circle-gitea" />
 </manifest>
